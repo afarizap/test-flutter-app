@@ -39,6 +39,18 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
+              Container(
+                width: 100,
+                height: MediaQuery.of(context).size.height * 0.3,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                ),
+                child: Icon(
+                  Icons.settings_outlined,
+                  color: Colors.black,
+                  size: 24,
+                ),
+              ),
               Icon(
                 FFIcons.ksearch,
                 color: Colors.black,
