@@ -38,7 +38,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           onTap: () => FocusScope.of(context).unfocus(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            children: [
+              Icon(
+                FFIcons.ksearch,
+                color: Colors.black,
+                size: 24,
+              ),
+            ],
           ),
         ),
       ),
