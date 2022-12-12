@@ -36,25 +36,25 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
+          child: Stack(
             children: [
-              Container(
-                width: 100,
-                height: MediaQuery.of(context).size.height * 0.3,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+              Align(
+                alignment: AlignmentDirectional(-1, -1),
+                child: Container(
+                  width: 100,
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                  ),
                 ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(-0.96, -0.53),
                 child: Icon(
-                  Icons.settings_outlined,
+                  FFIcons.ksearch,
                   color: Colors.black,
                   size: 24,
                 ),
-              ),
-              Icon(
-                FFIcons.ksearch,
-                color: Colors.black,
-                size: 24,
               ),
             ],
           ),
